@@ -1,5 +1,3 @@
-import { useLoading } from "@/context/loadingContext";
-
 const Boosts = () => {
   return (
     <div className="flex flex-col justify-between bg-gradient-to-r from-purple-700 to-purple-300 rounded-lg mb-4 mx-1 p-4">

@@ -2,7 +2,7 @@ import Game from "@/components/pages/Game/Game";
 
 const Games = () => {
   return (
-    <div className="">
+    <div className="min-h-[571px]">
       <Game />
     </div>
   );

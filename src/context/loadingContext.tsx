@@ -26,7 +26,7 @@ export const LoadingProvider = ({ children }: any) => {
   const [lastLogin, setlastLogin] = useState(0);
   const [level, setLevel] = useState(0);
   const [power, setPower] = useState(1);
-  const [maxEnergy, setMaxEnergy] = useState(500);
+  const [maxEnergy, setMaxEnergy] = useState(50);
   const [energy, setEnergy] = useState(maxEnergy);
   const [energyCooldown, setEnergyCooldown] = useState(60);
 

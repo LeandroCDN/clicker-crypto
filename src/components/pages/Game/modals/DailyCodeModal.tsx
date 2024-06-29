@@ -84,7 +84,7 @@ const DailyCodeModal: React.FC<DailyCodeModalProps> = ({ onClose }) => {
       </div>
 
       {/* Iconos para ingresar el código */}
-      <div className="flex space-x-2 border-gradient p-2">
+      <div className="flex space-x-2 border-gradient p-2 bg-white bg-opacity-15">
         <button onClick={() => handleIconClick("0")}>
           <ArrowLeftIcon className="h-6 w-6 text-black" />
         </button>

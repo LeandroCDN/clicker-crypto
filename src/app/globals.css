@@ -30,4 +30,10 @@ body {
   .text-balance {
     text-wrap: balance;
   }
+  .border-gradient {
+    border: 2px solid transparent;
+    border-image: linear-gradient(to right, #fe68b3, #64c3e8) 1;
+  }
 }
+
+

@@ -32,8 +32,9 @@ body {
   }
   .border-gradient {
     border: 2px solid transparent;
-    border-image: linear-gradient(to right, #fe68b3, #64c3e8) 1;
+    border-image: linear-gradient(to right, #ff009d, #00baff) 1;
   }
+  
 }
 
 

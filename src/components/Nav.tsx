@@ -1,33 +1,63 @@
 "use client";
 import Link from "next/link";
+import BaseModal from "./BaseModal";
+import { useState } from "react";
+import ToolsModal from "./navModals/ToolsModal";
+import BoostsModal from "./navModals/BoostsModal";
 
 const Nav = () => {
+  const [showToolsModal, setShowToolsModal] = useState(false);
+  const [showBoostsModal, setShowBoostsModal] = useState(false);
+  const [showDailyMissionModal, setShowDailyMissionModal] = useState(false);
+
+  const openToolsModal = () => {
+    setShowToolsModal(true);
+  };
+
+  const closeToolsModal = () => {
+    setShowToolsModal(false);
+  };
+  const openBoostsModal = () => {
+    setShowBoostsModal(true);
+  };
+
+  const closeBoostsModal = () => {
+    setShowBoostsModal(false);
+  };
+
   return (
     <div className="flex flex-row justify-between">
       <div>
-        <Link
+        <button
           className="min-h-12 flex justify-center items-center bg-green-500 bg-opacity-70 cursor-pointer px-6 rounded-lg"
-          href="/game"
+          onClick={openBoostsModal}
         >
-          <h3>Game</h3>
-        </Link>
+          <h3>Boosts</h3>
+        </button>
       </div>
       <div>
-        <Link
+        <button
           className="min-h-12 flex justify-center items-center bg-green-500 bg-opacity-70 cursor-pointer px-6 rounded-lg"
-          href="/upgrades"
+          onClick={openToolsModal}
         >
-          <h3>Upgrades</h3>
-        </Link>
+          <h3>Tools</h3>
+        </button>
       </div>
       <div>
-        <Link
+        <button
           className="min-h-12 flex justify-center items-center bg-green-500 bg-opacity-70 cursor-pointer px-6 rounded-lg"
-          href="/friends"
+          onClick={openToolsModal}
         >
           <h3>Friends</h3>
-        </Link>
+        </button>
       </div>
+
+      <BaseModal isOpen={showToolsModal} onClose={closeToolsModal}>
+        <ToolsModal onClose={closeToolsModal} />
+      </BaseModal>
+      <BaseModal isOpen={showBoostsModal} onClose={closeBoostsModal}>
+        <BoostsModal onClose={closeBoostsModal} />
+      </BaseModal>
     </div>
   );
 };

@@ -11,6 +11,10 @@ const config: Config = {
       backgroundImage: {
         'custom-bg': "url('/bg.jpeg')",
       },
+      colors: {
+        customPink: '#ff009d',
+        customBlue: '#00baff',
+      },
     },
   },
   plugins: [],

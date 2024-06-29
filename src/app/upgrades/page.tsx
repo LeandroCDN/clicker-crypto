@@ -1,7 +1,9 @@
+import UpgradesPage from "@/components/pages/Upgrades/UpgradesPage";
+
 const Upgrades = () => {
   return (
-    <div className="">
-      <h1>Upgrades Page</h1>
+    <div className="min-h-[571px] ">
+      <UpgradesPage />
     </div>
   );
 };

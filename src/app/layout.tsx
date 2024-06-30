@@ -5,6 +5,7 @@ import Top from "@/components/Top";
 import { LoadingProvider } from "@/context/loadingContext";
 import "./globals.css";
 import localFont from "next/font/local";
+import EnergyRecovery from "@/components/updater/EnergyRecovery";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -28,6 +29,7 @@ export default function RootLayout({
         <LoadingProvider>
           <div className="container mx-auto max-w-md p-4  bg-custom-bg bg-no-repeat bg-top">
             <Top />
+            <EnergyRecovery />
             {children}
             <Nav />
           </div>

@@ -1,5 +1,5 @@
 "use client";
-import { createContext, useContext, useState } from "react";
+import { createContext, useContext, useEffect, useState } from "react";
 
 interface LoadingContextType {
   totalCoins: number;
@@ -10,6 +10,20 @@ interface LoadingContextType {
   setEnergy: React.Dispatch<React.SetStateAction<number>>;
   maxEnergy: number;
   setMaxEnergy: React.Dispatch<React.SetStateAction<number>>;
+  energyCooldown: number;
+  setEnergyCooldown: React.Dispatch<React.SetStateAction<number>>;
+  boostClickActive: boolean;
+  setBoostClickActive: React.Dispatch<React.SetStateAction<boolean>>;
+  boostClickEndTime: number;
+  setBoostClickEndTime: React.Dispatch<React.SetStateAction<number>>;
+  boostEnergyActive: boolean;
+  setBoostEnergyActive: React.Dispatch<React.SetStateAction<boolean>>;
+  boostEnergyEndTime: number;
+  setBoostEnergyEndTime: React.Dispatch<React.SetStateAction<number>>;
+  boostStaminaActive: boolean;
+  setBoostStaminaActive: React.Dispatch<React.SetStateAction<boolean>>;
+  boostStaminaEndTime: number;
+  setBoostStaminaEndTime: React.Dispatch<React.SetStateAction<number>>;
 }
 
 export const LoadingContext = createContext<LoadingContextType | undefined>(
@@ -29,6 +43,25 @@ export const LoadingProvider = ({ children }: any) => {
   const [maxEnergy, setMaxEnergy] = useState(50);
   const [energy, setEnergy] = useState(maxEnergy);
   const [energyCooldown, setEnergyCooldown] = useState(60);
+  const [boostClickActive, setBoostClickActive] = useState(false);
+  const [boostClickEndTime, setBoostClickEndTime] = useState(0);
+  const [boostEnergyActive, setBoostEnergyActive] = useState(false);
+  const [boostEnergyEndTime, setBoostEnergyEndTime] = useState(0);
+  const [boostStaminaActive, setBoostStaminaActive] = useState(false);
+  const [boostStaminaEndTime, setBoostStaminaEndTime] = useState(0);
+
+  // Función para incrementar la energía cada segundo
+  useEffect(() => {
+    const interval = setInterval(() => {
+      if (energy < maxEnergy) {
+        setEnergy((prevEnergy) =>
+          Math.min(prevEnergy + (boostStaminaActive ? 2 : 1), maxEnergy)
+        );
+      }
+    }, 1000); // Incrementar cada segundo
+
+    return () => clearInterval(interval);
+  }, [energy, maxEnergy]);
 
   return (
     <LoadingContext.Provider
@@ -41,6 +74,20 @@ export const LoadingProvider = ({ children }: any) => {
         setEnergy,
         maxEnergy,
         setMaxEnergy,
+        energyCooldown,
+        setEnergyCooldown,
+        boostClickActive,
+        setBoostClickActive,
+        boostClickEndTime,
+        setBoostClickEndTime,
+        boostEnergyActive,
+        setBoostEnergyActive,
+        boostEnergyEndTime,
+        setBoostEnergyEndTime,
+        boostStaminaActive,
+        setBoostStaminaActive,
+        boostStaminaEndTime,
+        setBoostStaminaEndTime,
       }}
     >
       {children}

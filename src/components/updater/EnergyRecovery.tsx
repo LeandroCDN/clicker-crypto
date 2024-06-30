@@ -19,7 +19,7 @@ const EnergyRecovery = () => {
           Math.min(prevEnergy + boostStaminaActive ? 2 : 1, maxEnergy)
         );
       }
-    }, 1100); // Incrementar cada segundo
+    }, 500); // Incrementar cada segundo
 
     return () => clearInterval(interval);
   }, [energy, maxEnergy]);

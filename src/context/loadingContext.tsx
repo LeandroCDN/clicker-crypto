@@ -58,7 +58,7 @@ export const LoadingProvider = ({ children }: any) => {
           Math.min(prevEnergy + (boostStaminaActive ? 2 : 1), maxEnergy)
         );
       }
-    }, 1000); // Incrementar cada segundo
+    }, 500); // Incrementar cada segundo
 
     return () => clearInterval(interval);
   }, [energy, maxEnergy]);

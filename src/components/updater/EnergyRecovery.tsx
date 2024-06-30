@@ -12,17 +12,17 @@ const EnergyRecovery = () => {
     boostStaminaActive,
   }: any = useLoading();
 
-  useEffect(() => {
-    const interval = setInterval(() => {
-      if (energy < maxEnergy) {
-        setEnergy((prevEnergy: number) =>
-          Math.min(prevEnergy + boostStaminaActive ? 2 : 1, maxEnergy)
-        );
-      }
-    }, 500); // Incrementar cada segundo
+  // useEffect(() => {
+  //   const interval = setInterval(() => {
+  //     if (energy < maxEnergy) {
+  //       setEnergy((prevEnergy: number) =>
+  //         Math.min(prevEnergy + boostStaminaActive ? 2 : 1, maxEnergy)
+  //       );
+  //     }
+  //   }, 500); // Incrementar cada segundo
 
-    return () => clearInterval(interval);
-  }, [energy, maxEnergy]);
+  //   return () => clearInterval(interval);
+  // }, [energy, maxEnergy]);
 
   return null; // No se renderiza ningún contenido visible
 };

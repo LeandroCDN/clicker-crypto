@@ -4,6 +4,7 @@ import BaseModal from "../../BaseModal";
 import DailyLoginModal from "./modals/DailyLoginModal";
 import DailyCodeModal from "./modals/DailyCodeModal";
 import DailyMissionModal from "./modals/DailyMissionModal";
+import Image from "next/image";
 
 const Daily = () => {
   const [showDailyLoginModal, setShowDailyLoginModal] = useState(false);
@@ -37,19 +38,49 @@ const Daily = () => {
   return (
     <div className="flex flex-row justify-between bg-gradient-to-r from-customPink to-customBlue p-4 rounded-lg  mb-2">
       <div className="min-h-12 flex justify-center bg-white bg-opacity-15 p-2 mx-1  rounded-lg">
-        <button className="text-xl" onClick={openDailyLoginModal}>
-          Daily Login 😃
+        <button
+          className="text-xl flex justify-center items-center flex-col"
+          onClick={openDailyLoginModal}
+        >
+          <p>Daily Login 😃</p>
+          {/* <Image
+            src={"/DailyLogin.png"}
+            alt="Coin"
+            className={""}
+            width={64}
+            height={64}
+          /> */}
         </button>
       </div>
 
       <div className="min-h-12 flex justify-center bg-white bg-opacity-15 p-2 mx-1  rounded-lg">
-        <button className="text-xl" onClick={openDailyCodeModal}>
-          Daily code 😃
+        <button
+          className="text-xl flex justify-center items-center flex-col"
+          onClick={openDailyCodeModal}
+        >
+          <p> Daily code 😃 </p>
+          {/* <Image
+            src={"/DailyCode.png"}
+            alt="Coin"
+            className={""}
+            width={64}
+            height={64}
+          /> */}
         </button>
       </div>
       <div className="min-h-12 flex justify-center bg-white bg-opacity-15 p-2 mx-1  rounded-lg">
-        <button className="text-xl" onClick={openDailyMissionModal}>
-          Mission 😃
+        <button
+          className="text-xl flex justify-center items-center flex-col"
+          onClick={openDailyMissionModal}
+        >
+          <p> Mission 😃</p>
+          {/* <Image
+            src={"/DailyMission.png"}
+            alt="Coin"
+            className={""}
+            width={64}
+            height={64}
+          /> */}
         </button>
       </div>
 

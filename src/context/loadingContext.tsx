@@ -42,7 +42,7 @@ export const LoadingProvider = ({ children }: any) => {
   const [power, setPower] = useState(1);
   const [maxEnergy, setMaxEnergy] = useState(50);
   const [energy, setEnergy] = useState(maxEnergy);
-  const [energyCooldown, setEnergyCooldown] = useState(60);
+  const [energyCooldown, setEnergyCooldown] = useState(1);
   const [boostClickActive, setBoostClickActive] = useState(false);
   const [boostClickEndTime, setBoostClickEndTime] = useState(0);
   const [boostEnergyActive, setBoostEnergyActive] = useState(false);

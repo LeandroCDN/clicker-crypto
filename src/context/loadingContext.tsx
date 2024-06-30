@@ -34,11 +34,6 @@ export const useLoading = () => useContext(LoadingContext);
 
 export const LoadingProvider = ({ children }: any) => {
   const [totalCoins, setTotalCoins] = useState(0);
-  const [historicalCoins, setHistoricalCoins] = useState(0);
-  const [totalCodes, setTotalCodes] = useState(0);
-  const [totalMissions, setTotalMissions] = useState(0);
-  const [lastLogin, setlastLogin] = useState(0);
-  const [level, setLevel] = useState(0);
   const [power, setPower] = useState(1);
   const [maxEnergy, setMaxEnergy] = useState(50);
   const [energy, setEnergy] = useState(maxEnergy);

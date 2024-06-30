@@ -4,11 +4,13 @@ import BaseModal from "./BaseModal";
 import { useState } from "react";
 import ToolsModal from "./navModals/ToolsModal";
 import BoostsModal from "./navModals/BoostsModal";
+import FriendsModal from "./navModals/FriendsModal";
 import Image from "next/image";
 
 const Nav = () => {
   const [showToolsModal, setShowToolsModal] = useState(false);
   const [showBoostsModal, setShowBoostsModal] = useState(false);
+  const [showFriendsModal, setShowFriendsModal] = useState(false);
   const [showDailyMissionModal, setShowDailyMissionModal] = useState(false);
 
   const openToolsModal = () => {
@@ -25,6 +27,13 @@ const Nav = () => {
 
   const closeBoostsModal = () => {
     setShowBoostsModal(false);
+  };
+  const openFriendsModal = () => {
+    setShowFriendsModal(true);
+  };
+
+  const closeFriendsModal = () => {
+    setShowFriendsModal(false);
   };
 
   return (
@@ -61,7 +70,7 @@ const Nav = () => {
       <div>
         <button
           className="min-h-10 min-w-[115px] flex justify-evenly items-center bg-gradient-to-r from-customPink to-customBlue cursor-pointer px-2 rounded-lg"
-          onClick={openToolsModal}
+          onClick={openFriendsModal}
         >
           <Image
             src={"/Friends.png"}
@@ -79,6 +88,9 @@ const Nav = () => {
       </BaseModal>
       <BaseModal isOpen={showBoostsModal} onClose={closeBoostsModal}>
         <BoostsModal onClose={closeBoostsModal} />
+      </BaseModal>
+      <BaseModal isOpen={showFriendsModal} onClose={closeFriendsModal}>
+        <FriendsModal onClose={closeFriendsModal} />
       </BaseModal>
     </div>
   );

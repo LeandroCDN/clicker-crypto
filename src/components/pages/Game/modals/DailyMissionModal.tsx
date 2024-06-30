@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 
 interface DailyMissionModalProps {
   onClose: () => void;
@@ -6,87 +7,123 @@ interface DailyMissionModalProps {
 
 const DailyMissionModal: React.FC<DailyMissionModalProps> = ({ onClose }) => {
   return (
-    <div className="p-4 bg-white rounded-lg shadow-md max-w-md mx-auto">
-      <h2 className="text-black text-xl mb-4">Daily Mission Modal Content</h2>
+    <div className="flex flex-col justify-between items-center min-w-[90%]">
+      <h2 className="mb-4 text-5xl text-yellow-300">Daily Mission</h2>
 
-      <div className="mb-4">
-        <h3 className="text-black text-lg">View videos:</h3>
-        <ul className="list-disc list-inside pl-4">
-          <li>
-            <a
-              href="https://example.com/video1"
-              target="_blank"
-              className="text-blue-500 hover:underline"
-            >
-              Video 1
-            </a>
-          </li>
-          <li>
-            <a
-              href="https://example.com/video2"
-              target="_blank"
-              className="text-blue-500 hover:underline"
-            >
-              Video 2
-            </a>
-          </li>
-        </ul>
+      <div className="flex flex-col  justify-center min-w-full">
+        <div className="min-h-12 flex flex-col justify-center items-center  p-2 px-4 mb-2 rounded-lg border-gradient">
+          <div className="flex flex-col items-center mr-2 mb-1">
+            <h3 className="text-2xl">Subscribe to our chanel</h3>
+          </div>
+          <div className="flex flex-row  items-center w-full">
+            <Image
+              src={"/media/youtube.svg"}
+              alt="Coin"
+              className={" mr-2"}
+              width={48}
+              height={48}
+            />
+            <p className={" mr-2"}> X </p>
+            <div className="flex flex-row items-center flex-grow text-center mr-4">
+              <Image
+                src={"/IconSvg/coin.svg"}
+                alt="Coin"
+                className={" mr-4"}
+                width={24}
+                height={24}
+              />{" "}
+              <p className="text-lg">5,000</p>
+            </div>
+            <button className="text-xl bg-gradient-to-r from-customPink to-customBlue px-4 rounded-full">
+              GO!
+            </button>
+          </div>
+        </div>
+        <div className="min-h-12 flex flex-col justify-center items-center  p-2 px-4 mb-2 rounded-lg border-gradient">
+          <div className="flex flex-col items-center mr-2 mb-1">
+            <h3 className="text-2xl">Watch Today&apos;s Video</h3>
+          </div>
+          <div className="flex flex-row  items-center w-full">
+            <Image
+              src={"/media/youtube.svg"}
+              alt="Coin"
+              className={" mr-2"}
+              width={48}
+              height={48}
+            />
+            <p className={" mr-2"}> X </p>
+            <div className="flex flex-row items-center flex-grow text-center mr-4">
+              <Image
+                src={"/IconSvg/coin.svg"}
+                alt="Coin"
+                className={" mr-4"}
+                width={24}
+                height={24}
+              />{" "}
+              <p className="text-lg">7,000</p>
+            </div>
+            <button className="text-xl bg-gradient-to-r from-customPink to-customBlue px-4 rounded-full">
+              GO!
+            </button>
+          </div>
+        </div>
+        <div className="min-h-12 flex flex-col justify-center items-center  p-2 px-4 mb-2 rounded-lg border-gradient">
+          <div className="flex flex-col items-center mr-2 mb-1">
+            <h3 className="text-2xl">Follow Us On Twitter</h3>
+          </div>
+          <div className="flex flex-row  items-center w-full">
+            <Image
+              src={"/media/Twitter.svg"}
+              alt="Coin"
+              className={" mr-2"}
+              width={48}
+              height={48}
+            />
+            <p className={" mr-2"}> X </p>
+            <div className="flex flex-row items-center flex-grow text-center mr-4">
+              <Image
+                src={"/IconSvg/coin.svg"}
+                alt="Coin"
+                className={" mr-4"}
+                width={24}
+                height={24}
+              />{" "}
+              <p className="text-lg">7,000</p>
+            </div>
+            <button className="text-xl bg-gradient-to-r from-customPink to-customBlue px-4 rounded-full">
+              GO!
+            </button>
+          </div>
+        </div>
+        <div className="min-h-12 flex flex-col justify-center items-center  p-2 px-4 mb-2 rounded-lg border-gradient">
+          <div className="flex flex-col items-center mr-2 mb-1">
+            <h3 className="text-2xl">Join Us On Discord</h3>
+          </div>
+          <div className="flex flex-row  items-center w-full">
+            <Image
+              src={"/media/discord.svg"}
+              alt="Coin"
+              className={" mr-2"}
+              width={42}
+              height={42}
+            />
+            <p className={" mr-2"}> X </p>
+            <div className="flex flex-row items-center flex-grow text-center mr-4">
+              <Image
+                src={"/IconSvg/coin.svg"}
+                alt="Coin"
+                className={" mr-4"}
+                width={24}
+                height={24}
+              />{" "}
+              <p className="text-lg">10,000</p>
+            </div>
+            <button className="text-xl bg-gradient-to-r from-customPink to-customBlue px-4 rounded-full">
+              GO!
+            </button>
+          </div>
+        </div>
       </div>
-
-      <div className="mb-4">
-        <h3 className="text-black text-lg">Follow on:</h3>
-        <ul className="list-disc list-inside pl-4">
-          <li>
-            <a
-              href="https://twitter.com"
-              target="_blank"
-              className="text-blue-500 hover:underline"
-            >
-              Twitter
-            </a>
-          </li>
-          <li>
-            <a
-              href="https://youtube.com"
-              target="_blank"
-              className="text-blue-500 hover:underline"
-            >
-              YouTube
-            </a>
-          </li>
-        </ul>
-      </div>
-
-      <div className="mb-4">
-        <h3 className="text-black text-lg">Task:</h3>
-        <ul className="list-disc list-inside pl-4">
-          <li>
-            <a
-              href="https://example.com/retweet"
-              target="_blank"
-              className="text-blue-500 hover:underline"
-            >
-              Retweet
-            </a>
-          </li>
-          <li>
-            <a
-              href="https://example.com/register"
-              target="_blank"
-              className="text-blue-500 hover:underline"
-            >
-              Register on VIP list
-            </a>
-          </li>
-        </ul>
-      </div>
-
-      <button
-        onClick={onClose}
-        className="mt-4 bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600"
-      >
-        Close
-      </button>
     </div>
   );
 };

@@ -148,7 +148,7 @@ const BoostsModal: React.FC<BoostsModalProps> = ({ onClose }) => {
             <h3 className=" text-xl">Energy Boost</h3>
             <p className="text-sm text-gray-400">
               {" "}
-              Double max energy fot the next 24hs
+              Double max energy for the next 24hs
             </p>
           </div>
           <div>

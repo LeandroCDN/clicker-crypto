@@ -156,7 +156,7 @@ const Top = () => {
                   </li>
                   <li className="p-2 hover:border-gradient cursor-pointer text-gray-300">
                     <span onClick={openBoostsModal} className="cursor-pointer">
-                      Boots
+                      Boosts
                     </span>
                   </li>
                 </ul>
@@ -214,7 +214,7 @@ const Top = () => {
       <div className="flex items-center bg-gradient-to-r from-customPink to-customBlue rounded-full w-3/4 px-4 py-2 shadow-md mx-2">
         <span className="text-2xl mr-2">
           <Image
-            src={`/profile/${randomImage}.png`}
+            src={`/profile/${34}.png`}
             alt="Coin"
             className={"mr-2"}
             width={36}

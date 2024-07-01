@@ -15,10 +15,10 @@ const Click = () => {
       setEnergy(energy - power);
 
       // Reducir temporalmente el tamaño del ícono
-      setIconSize("h-48 w-48");
-      setTimeout(() => {
-        setIconSize("h-60 w-60");
-      }, 500); // Restaurar tamaño original después de 500ms
+      // setIconSize("h-48 w-48");
+      // setTimeout(() => {
+      //   setIconSize("h-60 w-60");
+      // }, 500); // Restaurar tamaño original después de 500ms
 
       // Cambiar estado de presionado y cambiar la imagen
       setPressed(true);

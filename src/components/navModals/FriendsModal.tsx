@@ -84,7 +84,7 @@ const FriendsModal: React.FC<FriendsModalProps> = ({ onClose }) => {
             </div>
             <div className="flex-none flex flex-row items-center justify-between bg-white rounded-full bg-opacity-20 w-full py-1 px-4 mb-1">
               <div className="flex flex-row items-center">
-                <p className="text-xl text-customPink">1.</p>
+                <p className="text-xl text-customPink">2.</p>
                 <Image
                   src={`/profile/${getRandomProfileImage()}.png`}
                   alt="Coin"
@@ -98,7 +98,7 @@ const FriendsModal: React.FC<FriendsModalProps> = ({ onClose }) => {
             </div>
             <div className="flex-none flex flex-row items-center justify-between bg-white rounded-full bg-opacity-20 w-full py-1 px-4 mb-1">
               <div className="flex flex-row items-center">
-                <p className="text-xl text-customPink">1.</p>
+                <p className="text-xl text-customPink">3.</p>
                 <Image
                   src={`/profile/${getRandomProfileImage()}.png`}
                   alt="Coin"
@@ -112,7 +112,7 @@ const FriendsModal: React.FC<FriendsModalProps> = ({ onClose }) => {
             </div>
             <div className="flex-none flex flex-row items-center justify-between bg-white rounded-full bg-opacity-20 w-full py-1 px-4 mb-1">
               <div className="flex flex-row items-center">
-                <p className="text-xl text-customPink">1.</p>
+                <p className="text-xl text-customPink">4.</p>
                 <Image
                   src={`/profile/${getRandomProfileImage()}.png`}
                   alt="Coin"

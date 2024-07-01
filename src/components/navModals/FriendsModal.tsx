@@ -27,7 +27,7 @@ const FriendsModal: React.FC<FriendsModalProps> = ({ onClose }) => {
           </div>
           <div className="flex flex-row justify-center items-center w-full">
             <Image
-              src={"/gift.png"}
+              src={"/Gift.png"}
               alt="Coin"
               className={" mr-2 text-white"}
               width={76}
@@ -41,7 +41,7 @@ const FriendsModal: React.FC<FriendsModalProps> = ({ onClose }) => {
             <div className="flex-none flex flex-col items-center justify-between h-full">
               <div className="flex flex-row">
                 <Image
-                  src={"/coin.png"}
+                  src={"/Coin.png"}
                   alt="Coin"
                   className={" mr-2 text-white"}
                   width={24}
@@ -51,7 +51,7 @@ const FriendsModal: React.FC<FriendsModalProps> = ({ onClose }) => {
               </div>
               <div className="flex flex-row">
                 <Image
-                  src={"/coin.png"}
+                  src={"/Coin.png"}
                   alt="Coin"
                   className={" mr-2 text-white"}
                   width={24}

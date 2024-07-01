@@ -82,7 +82,7 @@ const DailyCodeModal: React.FC<DailyCodeModalProps> = ({ onClose }) => {
       case "3":
         return (
           <Image
-            src={"/codebuttons/down.png"}
+            src={"/codebuttons/Down.png"}
             alt="Down Arrow"
             className="h-6 w-6"
             width={24}

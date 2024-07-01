@@ -6,11 +6,18 @@ import Image from "next/image";
 import ConfigModal from "./navModals/ConfigModal";
 import TopMenu from "./TopMenu";
 
+const getRandomProfileImage = () => {
+  const numbers = [31, 32, 33, 34];
+  const randomIndex = Math.floor(Math.random() * numbers.length);
+  return numbers[randomIndex].toString();
+};
+
 const Top = () => {
   const [showMenu, setShowMenu] = useState(false);
   const [showConfigModal, setShowConfigModal] = useState(false);
   const menuRef = useRef<HTMLDivElement>(null);
   const buttonRef = useRef<HTMLButtonElement>(null);
+  const randomImage = getRandomProfileImage();
 
   const openConfigModal = () => {
     setShowConfigModal(true);
@@ -46,8 +53,7 @@ const Top = () => {
     };
   }, [showMenu]);
 
-  const randomEmoji = "😀";
-  const randomName = `FranCrypto`;
+  const randomName = `Holly`;
   const level = 5;
 
   return (
@@ -67,8 +73,18 @@ const Top = () => {
         )}
       </div>
       <div className="flex items-center bg-gradient-to-r from-customPink to-customBlue rounded-full w-3/4 px-4 py-2 shadow-md mx-2">
-        <span className="text-2xl mr-2">{randomEmoji}</span>
-        <span className="flex-grow text-center text-white">{randomName}</span>
+        <span className="text-2xl mr-2">
+          <Image
+            src={`/profile/${randomImage}.png`}
+            alt="Coin"
+            className={"mr-2"}
+            width={36}
+            height={36}
+          />
+        </span>
+        <span className="flex-grow text-center text-white text-2xl">
+          {randomName}
+        </span>
         <span className="ml-2 text-xl text-white">{`Lvl ${level}`}</span>
       </div>
       <div className="relative">

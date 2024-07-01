@@ -4,7 +4,14 @@ interface FriendsModalProps {
   onClose: () => void;
 }
 
+const getRandomProfileImage = () => {
+  const numbers = [31, 32, 33, 34];
+  const randomIndex = Math.floor(Math.random() * numbers.length);
+  return numbers[randomIndex].toString();
+};
+
 const FriendsModal: React.FC<FriendsModalProps> = ({ onClose }) => {
+  const randomImage = getRandomProfileImage();
   return (
     <div className="flex flex-col justify-between items-center min-w-[90%]">
       <h2 className="mb-4 text-5xl text-yellow-300">Friends</h2>
@@ -20,11 +27,11 @@ const FriendsModal: React.FC<FriendsModalProps> = ({ onClose }) => {
           </div>
           <div className="flex flex-row justify-center items-center w-full">
             <Image
-              src={"/IconSvg/coin.svg"}
+              src={"/gift.png"}
               alt="Coin"
               className={" mr-2 text-white"}
-              width={48}
-              height={48}
+              width={76}
+              height={76}
             />
 
             <div className="flex-none flex flex-col items-center justify-center  p-2 mr-2">
@@ -34,21 +41,21 @@ const FriendsModal: React.FC<FriendsModalProps> = ({ onClose }) => {
             <div className="flex-none flex flex-col items-center justify-between h-full">
               <div className="flex flex-row">
                 <Image
-                  src={"/IconSvg/coin.svg"}
+                  src={"/coin.png"}
                   alt="Coin"
                   className={" mr-2 text-white"}
-                  width={22}
-                  height={22}
+                  width={24}
+                  height={24}
                 />
                 <p className=" text-xl "> 3,000</p>
               </div>
               <div className="flex flex-row">
                 <Image
-                  src={"/IconSvg/coin.svg"}
+                  src={"/coin.png"}
                   alt="Coin"
                   className={" mr-2 text-white"}
-                  width={22}
-                  height={22}
+                  width={24}
+                  height={24}
                 />
                 <p className=" text-xl "> 3,000</p>
               </div>
@@ -64,28 +71,56 @@ const FriendsModal: React.FC<FriendsModalProps> = ({ onClose }) => {
             <div className="flex-none flex flex-row items-center justify-between bg-white rounded-full bg-opacity-20 w-full py-1 px-4 mb-1">
               <div className="flex flex-row items-center">
                 <p className="text-xl text-customPink">1.</p>
-                <p className="text-xl">😀 Holly</p>
+                <Image
+                  src={`/profile/${getRandomProfileImage()}.png`}
+                  alt="Coin"
+                  className={"mx-2"}
+                  width={32}
+                  height={32}
+                />
+                <p className="text-xl">Holly</p>
               </div>
               <p className="text-xl text-customBlue">Lvl-12</p>
             </div>
             <div className="flex-none flex flex-row items-center justify-between bg-white rounded-full bg-opacity-20 w-full py-1 px-4 mb-1">
               <div className="flex flex-row items-center">
                 <p className="text-xl text-customPink">1.</p>
-                <p className="text-xl">😀 Louis</p>
+                <Image
+                  src={`/profile/${getRandomProfileImage()}.png`}
+                  alt="Coin"
+                  className={"mx-2"}
+                  width={32}
+                  height={32}
+                />
+                <p className="text-xl">Louis</p>
               </div>
               <p className="text-xl text-customBlue">Lvl-10</p>
             </div>
             <div className="flex-none flex flex-row items-center justify-between bg-white rounded-full bg-opacity-20 w-full py-1 px-4 mb-1">
               <div className="flex flex-row items-center">
                 <p className="text-xl text-customPink">1.</p>
-                <p className="text-xl">😀 Nick</p>
+                <Image
+                  src={`/profile/${getRandomProfileImage()}.png`}
+                  alt="Coin"
+                  className={"mx-2"}
+                  width={32}
+                  height={32}
+                />
+                <p className="text-xl">Nick</p>
               </div>
               <p className="text-xl text-customBlue">Lvl-5</p>
             </div>
             <div className="flex-none flex flex-row items-center justify-between bg-white rounded-full bg-opacity-20 w-full py-1 px-4 mb-1">
               <div className="flex flex-row items-center">
                 <p className="text-xl text-customPink">1.</p>
-                <p className="text-xl">😀 George</p>
+                <Image
+                  src={`/profile/${getRandomProfileImage()}.png`}
+                  alt="Coin"
+                  className={"mx-2"}
+                  width={32}
+                  height={32}
+                />
+                <p className="text-xl">George</p>
               </div>
               <p className="text-xl text-customBlue">Lvl-1</p>
             </div>

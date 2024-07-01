@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { useLoading } from "@/context/loadingContext";
-
+import Image from "next/image";
 interface BoostsModalProps {
   onClose: () => void;
 }
@@ -109,9 +109,9 @@ const BoostsModal: React.FC<BoostsModalProps> = ({ onClose }) => {
     <div className="flex flex-col justify-between items-center ">
       <h2 className="mb-4 text-4xl text-yellow-300">BOOSTS</h2>
 
-      <div className="flex flex-col  justify-center">
-        <div className="min-h-12 flex justify-center items-center bg-white bg-opacity-15 p-2 mb-4 rounded-lg border-gradient">
-          <div className="max-w-[50%] mr-2">
+      <div className="flex flex-col justify-between w-full">
+        <div className="min-h-12 flex justify-between items-center bg-white bg-opacity-15 p-4 mb-4 rounded-lg border-gradient">
+          <div className="max-w-[70%] mr-2">
             <h3 className=" text-xl">Daily Boost</h3>
             <p className="text-sm text-gray-400">
               {" "}
@@ -130,12 +130,21 @@ const BoostsModal: React.FC<BoostsModalProps> = ({ onClose }) => {
             >
               {boostClickActive ? "Active" : "Get"}
             </button>
-            <p>😃 30,000</p>
+            <div className="flex flex-row justify-center items-center ">
+              <Image
+                src={"/Coin.png"}
+                alt="Coin"
+                className={"mr-2 "}
+                width={16}
+                height={16}
+              />
+              <p>5</p>
+            </div>
           </div>
         </div>
 
-        <div className="min-h-12 flex justify-center items-center bg-white bg-opacity-15 p-2 mb-4 rounded-lg border-gradient">
-          <div className="max-w-[50%] mr-2">
+        <div className="min-h-12 flex justify-between items-center bg-white bg-opacity-15 p-4 mb-4 rounded-lg border-gradient">
+          <div className="max-w-[70%] mr-2">
             <h3 className=" text-xl">Energy Boost</h3>
             <p className="text-sm text-gray-400">
               {" "}
@@ -154,11 +163,22 @@ const BoostsModal: React.FC<BoostsModalProps> = ({ onClose }) => {
             >
               {boostEnergyActive ? "Active" : "Get"}
             </button>
-            <p>😃 5</p>
+
+            <div className="flex flex-row justify-center items-center ">
+              <Image
+                src={"/Coin.png"}
+                alt="Coin"
+                className={"mr-2 "}
+                width={16}
+                height={16}
+              />
+              <p>5</p>
+            </div>
           </div>
         </div>
-        <div className="min-h-12 flex justify-center items-center bg-white bg-opacity-15 p-2 mb-4 rounded-lg border-gradient">
-          <div className="max-w-[50%] mr-2">
+
+        <div className="min-h-12 flex justify-between items-center bg-white bg-opacity-15 p-4 mb-4 rounded-lg border-gradient">
+          <div className="max-w-[70%] mr-2">
             <h3 className=" text-xl">Stamina Boost</h3>
             <p className="text-sm text-gray-400">
               {" "}
@@ -177,7 +197,16 @@ const BoostsModal: React.FC<BoostsModalProps> = ({ onClose }) => {
             >
               {boostStaminaActive ? "Active" : "Get"}
             </button>
-            <p>😃 5</p>
+            <div className="flex flex-row justify-center items-center ">
+              <Image
+                src={"/Coin.png"}
+                alt="Coin"
+                className={"mr-2 "}
+                width={16}
+                height={16}
+              />
+              <p>5</p>
+            </div>
           </div>
         </div>
       </div>

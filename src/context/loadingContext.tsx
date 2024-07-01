@@ -26,6 +26,8 @@ interface LoadingContextType {
   setBoostStaminaEndTime: React.Dispatch<React.SetStateAction<number>>;
   toolLevels: number[];
   setToolLevels: React.Dispatch<React.SetStateAction<number[]>>;
+  dailyLogin: boolean[];
+  setDailyLogin: React.Dispatch<React.SetStateAction<boolean[]>>;
 }
 
 export const LoadingContext = createContext<LoadingContextType | undefined>(
@@ -47,6 +49,15 @@ export const LoadingProvider = ({ children }: any) => {
   const [boostStaminaActive, setBoostStaminaActive] = useState(false);
   const [boostStaminaEndTime, setBoostStaminaEndTime] = useState(0);
   const [toolLevels, setToolLevels] = useState([1, 1, 1]);
+  const [dailyLogin, setDailyLogin] = useState([
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+  ]);
 
   // Función para incrementar la energía cada segundo
   useEffect(() => {
@@ -86,6 +97,8 @@ export const LoadingProvider = ({ children }: any) => {
         setBoostStaminaEndTime,
         toolLevels,
         setToolLevels,
+        dailyLogin,
+        setDailyLogin,
       }}
     >
       {children}

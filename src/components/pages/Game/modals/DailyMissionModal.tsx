@@ -54,7 +54,7 @@ const DailyMissionModal: React.FC<DailyMissionModalProps> = ({ onClose }) => {
             <p className={" mr-2"}> X </p>
             <div className="flex flex-row items-center flex-grow text-center mr-4">
               <Image
-                src={"/coin.png"}
+                src={"/Coin.png"}
                 alt="Coin"
                 className={" mr-4"}
                 width={24}

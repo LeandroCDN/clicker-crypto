@@ -72,7 +72,7 @@ const Daily = () => {
           className="text-xl flex justify-center items-center flex-col"
           onClick={openDailyMissionModal}
         >
-          <p> Mission </p>
+          <p>Daily Mission</p>
           <Image
             src={"/DailyMission.png"}
             alt="Coin"

@@ -1,6 +1,6 @@
 import React from "react";
 import { useLoading } from "@/context/loadingContext";
-
+import Image from "next/image";
 interface ToolsModalProps {
   onClose: () => void;
 }
@@ -68,7 +68,13 @@ const ToolsModal: React.FC<ToolsModalProps> = ({ onClose }) => {
               <p className="text-lg">{toolLevels[0]}</p>
             </div>
             <div className="flex-grow text-center mr-4">
-              <p className="text-6xl">😃</p>
+              <Image
+                src={"/ClickIcon.png"}
+                alt="Coin"
+                className={" mr-2 text-white"}
+                width={78}
+                height={78}
+              />
             </div>
             <div className="flex-none flex flex-col items-center justify-between h-full">
               <p className="text-xl mb-2">Cost: {toolLevels[0] * 10}</p>
@@ -96,7 +102,13 @@ const ToolsModal: React.FC<ToolsModalProps> = ({ onClose }) => {
               <p className="text-lg">{toolLevels[1]}</p>
             </div>
             <div className="flex-grow text-center mr-4">
-              <p className="text-6xl">😃</p>
+              <Image
+                src={"/Linghtning.png"}
+                alt="Coin"
+                className={" mr-2 text-white"}
+                width={78}
+                height={78}
+              />
             </div>
             <div className="flex-none flex flex-col items-center justify-between h-full">
               <p className="text-xl mb-2">Cost: {toolLevels[1] * 12}</p>
@@ -117,6 +129,7 @@ const ToolsModal: React.FC<ToolsModalProps> = ({ onClose }) => {
           </div>
         </div>
 
+        {/* Energy recovery */}
         <div className="min-h-12 flex flex-col justify-center items-center p-2 px-4 mb-4 rounded-lg border-gradient">
           <div className="flex flex-col items-center mr-2 mb-2">
             <h3 className="text-2xl">Stamina Upgrade</h3>
@@ -130,7 +143,13 @@ const ToolsModal: React.FC<ToolsModalProps> = ({ onClose }) => {
               <p className="text-lg">{toolLevels[2]}</p>
             </div>
             <div className="flex-grow text-center mr-4">
-              <p className="text-6xl">😃</p>
+              <Image
+                src={"/PingLightning.png"}
+                alt="Coin"
+                className={" mr-2 text-white"}
+                width={78}
+                height={78}
+              />
             </div>
             <div className="flex-none flex flex-col items-center justify-between h-full">
               <p className="text-xl mb-2">Cost: {toolLevels[2] * 30}</p>
@@ -151,5 +170,11 @@ const ToolsModal: React.FC<ToolsModalProps> = ({ onClose }) => {
 export default ToolsModal;
 
 {
-  /*  */
+  /* <Image
+                src={"/IconSvg/copy.svg"}
+                alt="Coin"
+                className={" mr-2 text-white"}
+                width={32}
+                height={32}
+              /> */
 }

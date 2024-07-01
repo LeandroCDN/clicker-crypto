@@ -1,15 +1,7 @@
-import React, { useState } from "react";
-import {
-  ArrowUpIcon,
-  ArrowDownIcon,
-  ArrowLeftIcon,
-  ArrowRightIcon,
-  CheckIcon,
-  XIcon,
-} from "@heroicons/react/solid"; // O @heroicons/react/outline
-import { UserIcon } from "@heroicons/react/solid"; // Utilizaremos este icono para la letra A
-import { AcademicCapIcon } from "@heroicons/react/solid"; // Utilizaremos este icono para la letra B
+import React, { useEffect, useState } from "react";
+import { CheckIcon, XIcon } from "@heroicons/react/solid";
 import Image from "next/image";
+import { useLoading } from "@/context/loadingContext";
 
 interface DailyCodeModalProps {
   onClose: () => void;
@@ -21,6 +13,19 @@ const DailyCodeModal: React.FC<DailyCodeModalProps> = ({ onClose }) => {
   const [feedback, setFeedback] = useState<string[]>(
     Array(correctCode.length).fill("")
   ); // Feedback visual para el usuario
+  const { totalCoins, setTotalCoins }: any = useLoading();
+
+  const getReward = () => {
+    setTotalCoins(totalCoins + 1000);
+  };
+  useEffect(() => {
+    if (
+      userCode.length === correctCode.length &&
+      JSON.stringify(userCode) === JSON.stringify(correctCode)
+    ) {
+      getReward();
+    }
+  }, [userCode]);
 
   const handleIconClick = (char: string) => {
     if (userCode.length < correctCode.length) {
@@ -41,21 +46,69 @@ const DailyCodeModal: React.FC<DailyCodeModalProps> = ({ onClose }) => {
     setUserCode([]);
   };
 
-  // Función para obtener el icono basado en el caracter
+  // Función para obtener la imagen basada en el caracter
   const getIcon = (char: string) => {
     switch (char) {
       case "0":
-        return <ArrowLeftIcon className="h-6 w-6 text-black" />;
+        return (
+          <Image
+            src={"/codebuttons/left.png"}
+            alt="Left Arrow"
+            className="h-6 w-6"
+            width={24}
+            height={24}
+          />
+        );
       case "1":
-        return <ArrowRightIcon className="h-6 w-6 text-black" />;
+        return (
+          <Image
+            src={"/codebuttons/right.png"}
+            alt="Right Arrow"
+            className="h-6 w-6"
+            width={24}
+            height={24}
+          />
+        );
       case "2":
-        return <ArrowUpIcon className="h-6 w-6 text-black" />;
+        return (
+          <Image
+            src={"/codebuttons/up.png"}
+            alt="Up Arrow"
+            className="h-6 w-6"
+            width={24}
+            height={24}
+          />
+        );
       case "3":
-        return <ArrowDownIcon className="h-6 w-6 text-black" />;
+        return (
+          <Image
+            src={"/codebuttons/down.png"}
+            alt="Down Arrow"
+            className="h-6 w-6"
+            width={24}
+            height={24}
+          />
+        );
       case "A":
-        return <UserIcon className="h-6 w-6 text-black" />;
+        return (
+          <Image
+            src={"/codebuttons/A.png"}
+            alt="A"
+            className="h-6 w-6"
+            width={24}
+            height={24}
+          />
+        );
       case "B":
-        return <AcademicCapIcon className="h-6 w-6 text-black" />;
+        return (
+          <Image
+            src={"/codebuttons/B.png"}
+            alt="B"
+            className="h-6 w-6"
+            width={24}
+            height={24}
+          />
+        );
       case "✔️":
         return <CheckIcon className="h-6 w-6 text-green-500" />;
       case "❌":
@@ -87,7 +140,7 @@ const DailyCodeModal: React.FC<DailyCodeModalProps> = ({ onClose }) => {
           (JSON.stringify(userCode) === JSON.stringify(correctCode) ? (
             <Image
               src={"/GreenTick.png"}
-              alt="Coin"
+              alt="Correct"
               className={``}
               width={120}
               height={120}
@@ -95,7 +148,7 @@ const DailyCodeModal: React.FC<DailyCodeModalProps> = ({ onClose }) => {
           ) : (
             <Image
               src={"/RedX.png"}
-              alt="Coin"
+              alt="Incorrect"
               className={``}
               width={120}
               height={120}
@@ -126,22 +179,58 @@ const DailyCodeModal: React.FC<DailyCodeModalProps> = ({ onClose }) => {
       {/* Iconos para ingresar el código */}
       <div className="flex space-x-2 border-gradient p-2 bg-white bg-opacity-15">
         <button onClick={() => handleIconClick("0")}>
-          <ArrowLeftIcon className="h-6 w-6 text-black" />
+          <Image
+            src={"/codebuttons/left.png"}
+            alt="Left Arrow"
+            className=""
+            width={48}
+            height={48}
+          />
         </button>
         <button onClick={() => handleIconClick("1")}>
-          <ArrowRightIcon className="h-6 w-6 text-black" />
+          <Image
+            src={"/codebuttons/right.png"}
+            alt="Right Arrow"
+            className=""
+            width={48}
+            height={48}
+          />
         </button>
         <button onClick={() => handleIconClick("2")}>
-          <ArrowUpIcon className="h-6 w-6 text-black" />
+          <Image
+            src={"/codebuttons/up.png"}
+            alt="Up Arrow"
+            className=""
+            width={48}
+            height={48}
+          />
         </button>
         <button onClick={() => handleIconClick("3")}>
-          <ArrowDownIcon className="h-6 w-6 text-black" />
+          <Image
+            src={"/codebuttons/down.png"}
+            alt="Down Arrow"
+            className=""
+            width={48}
+            height={48}
+          />
         </button>
         <button onClick={() => handleIconClick("A")}>
-          <UserIcon className="h-6 w-6 text-black" />
+          <Image
+            src={"/codebuttons/A.png"}
+            alt="A"
+            className=""
+            width={48}
+            height={48}
+          />
         </button>
         <button onClick={() => handleIconClick("B")}>
-          <AcademicCapIcon className="h-6 w-6 text-black" />
+          <Image
+            src={"/codebuttons/B.png"}
+            alt="B"
+            className=""
+            width={48}
+            height={48}
+          />
         </button>
       </div>
 

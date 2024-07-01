@@ -24,6 +24,8 @@ interface LoadingContextType {
   setBoostStaminaActive: React.Dispatch<React.SetStateAction<boolean>>;
   boostStaminaEndTime: number;
   setBoostStaminaEndTime: React.Dispatch<React.SetStateAction<number>>;
+  toolLevels: number[];
+  setToolLevels: React.Dispatch<React.SetStateAction<number[]>>;
 }
 
 export const LoadingContext = createContext<LoadingContextType | undefined>(
@@ -44,16 +46,15 @@ export const LoadingProvider = ({ children }: any) => {
   const [boostEnergyEndTime, setBoostEnergyEndTime] = useState(0);
   const [boostStaminaActive, setBoostStaminaActive] = useState(false);
   const [boostStaminaEndTime, setBoostStaminaEndTime] = useState(0);
+  const [toolLevels, setToolLevels] = useState([1, 1, 1]);
 
   // Función para incrementar la energía cada segundo
   useEffect(() => {
     const interval = setInterval(() => {
       if (energy < maxEnergy) {
-        setEnergy((prevEnergy) =>
-          Math.min(prevEnergy + (boostStaminaActive ? 2 : 1), maxEnergy)
-        );
+        setEnergy((prevEnergy) => Math.min(prevEnergy + 1, maxEnergy));
       }
-    }, 500); // Incrementar cada segundo
+    }, 1000 / (boostStaminaActive ? 2 * (toolLevels[2] - 1) : 1 + (toolLevels[2] - 1))); // Incrementar cada segundo
 
     return () => clearInterval(interval);
   }, [energy, maxEnergy]);
@@ -83,6 +84,8 @@ export const LoadingProvider = ({ children }: any) => {
         setBoostStaminaActive,
         boostStaminaEndTime,
         setBoostStaminaEndTime,
+        toolLevels,
+        setToolLevels,
       }}
     >
       {children}

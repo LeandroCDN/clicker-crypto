@@ -37,50 +37,49 @@ const Daily = () => {
 
   return (
     <div className="flex flex-row justify-between bg-gradient-to-r from-customPink to-customBlue p-4 rounded-lg  mb-2">
-      <div className="min-h-12 flex justify-center bg-white bg-opacity-15 p-2 mx-1  rounded-lg">
+      <div className="min-h-12 flex justify-center bg-white bg-opacity-15 px-2 pt-2 mx-1 rounded-lg">
         <button
           className="text-xl flex justify-center items-center flex-col"
           onClick={openDailyLoginModal}
         >
-          <p>Daily Login 😃</p>
-          {/* <Image
+          <p>Daily Login</p>
+          <Image
             src={"/DailyLogin.png"}
             alt="Coin"
             className={""}
             width={64}
             height={64}
-          /> */}
+          />
         </button>
       </div>
-
-      <div className="min-h-12 flex justify-center bg-white bg-opacity-15 p-2 mx-1  rounded-lg">
+      <div className="min-h-12 flex justify-center bg-white bg-opacity-15 px-2 pt-2 mx-1  rounded-lg">
         <button
           className="text-xl flex justify-center items-center flex-col"
           onClick={openDailyCodeModal}
         >
-          <p> Daily code 😃 </p>
-          {/* <Image
+          <p> Daily Code </p>
+          <Image
             src={"/DailyCode.png"}
             alt="Coin"
             className={""}
-            width={64}
-            height={64}
-          /> */}
+            width={48}
+            height={48}
+          />
         </button>
       </div>
-      <div className="min-h-12 flex justify-center bg-white bg-opacity-15 p-2 mx-1  rounded-lg">
+      <div className="min-h-12 flex justify-center bg-white bg-opacity-15 px-2 pt-2 mx-1  rounded-lg">
         <button
           className="text-xl flex justify-center items-center flex-col"
           onClick={openDailyMissionModal}
         >
-          <p> Mission 😃</p>
-          {/* <Image
+          <p> Mission </p>
+          <Image
             src={"/DailyMission.png"}
             alt="Coin"
             className={""}
-            width={64}
-            height={64}
-          /> */}
+            width={48}
+            height={48}
+          />
         </button>
       </div>
 

@@ -1,5 +1,5 @@
 import React from "react";
-
+import Image from "next/image";
 interface DailyLoginModalProps {
   onClose: () => void;
 }
@@ -10,40 +10,91 @@ const DailyLoginModal: React.FC<DailyLoginModalProps> = ({ onClose }) => {
       <div className="flex flex-row justify-between w-full mb-2">
         <div className="flex-1 flex justify-center p-2 mx-1 border-2 border-gradient rounded-lg">
           <button className="text-xl">
-            😃 <br /> DAY 1{" "}
+            <Image
+              src={"/DailyRewardCoins.png"}
+              alt="Coin"
+              className={``}
+              width={120}
+              height={120}
+            />
+            <p>DAY 1</p>
           </button>
         </div>
         <div className="flex-1 flex justify-center p-2 mx-1 border-2 border-gradient rounded-lg">
           <button className="text-xl">
-            😃 <br /> DAY 2{" "}
+            <Image
+              src={"/DailyRewardCoins.png"}
+              alt="Coin"
+              className={``}
+              width={120}
+              height={120}
+            />
+            <p>DAY 2</p>
           </button>
         </div>
         <div className="flex-1 flex justify-center p-2 mx-1 border-2 border-gradient rounded-lg">
           <button className="text-xl">
-            😃 <br /> DAY 3{" "}
+            <Image
+              src={"/GoldRewardChest.png"}
+              alt="Coin"
+              className={``}
+              width={120}
+              height={120}
+            />
+            <p>DAY 3</p>
           </button>
         </div>
       </div>
       <div className="flex flex-row justify-between w-full mb-2">
         <div className="flex-1 flex justify-center p-2 mx-1 border-2 border-gradient rounded-lg">
           <button className="text-xl">
-            😃 <br /> DAY 4
+            <Image
+              src={"/DailyRewardCoins.png"}
+              alt="Coin"
+              className={``}
+              width={120}
+              height={120}
+            />
+            <p>DAY 4</p>
           </button>
         </div>
         <div className="flex-1 flex justify-center p-2 mx-1 border-2 border-gradient rounded-lg">
           <button className="text-xl">
-            😃 <br /> DAY 5
+            <Image
+              src={"/GoldRewardChest.png"}
+              alt="Coin"
+              className={``}
+              width={120}
+              height={120}
+            />
+            <p>DAY 5</p>
           </button>
         </div>
         <div className="flex-1 flex justify-center p-2 mx-1 border-2 border-gradient rounded-lg">
           <button className="text-xl">
-            😃 <br /> DAY 6
+            <Image
+              src={"/DailyRewardCoins.png"}
+              alt="Coin"
+              className={``}
+              width={120}
+              height={120}
+            />
+            <p>DAY 1</p>
           </button>
         </div>
       </div>
       <div className="flex justify-center w-full mb-2">
-        <div className="flex-1 flex justify-center p-2 mx-1 border-2 border-gradient rounded-lg">
-          <button className="text-xl w-full">Daily 7</button>
+        <div className="flex-1 flex justify-center mx-1 border-2 border-gradient rounded-lg">
+          <button className="text-xl flex flex-row items-center justify-center w-full">
+            <p className="mr-4">DAY 7</p>
+            <Image
+              src={"/DailyRewardBigChest.png"}
+              alt="Coin"
+              className={""}
+              width={120}
+              height={120}
+            />
+          </button>
         </div>
       </div>
     </div>

@@ -207,7 +207,7 @@ const DailyCodeModal: React.FC<DailyCodeModalProps> = ({ onClose }) => {
         </button>
         <button onClick={() => handleIconClick("3")}>
           <Image
-            src={"/codebuttons/down.png"}
+            src={"/codebuttons/Down.png"}
             alt="Down Arrow"
             className=""
             width={48}

@@ -34,13 +34,17 @@ const Click = () => {
   return (
     <div className="min-h-[300px] flex justify-center items-center">
       <div className="mx-2">
-        <button onClick={handleClick}>
+        <button
+          onClick={handleClick}
+          style={{ outline: "none", userSelect: "none" }}
+        >
           <Image
             src={pressed ? "/CoinUnpressed.png" : "/CoinPress.png"}
             alt="Coin"
             className={``}
             width={300}
             height={300}
+            draggable="false"
           />
         </button>
       </div>

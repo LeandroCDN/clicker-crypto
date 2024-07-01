@@ -59,7 +59,7 @@ const MyProgresModal: React.FC<MyProgresModalProps> = ({ onClose }) => {
       <div className="flex flex-row justify-between">
         <div className="flex flex-row justify-center items-center mb-4 rounded-lg border-gradient max-w-[48%] px-2">
           <div className="flex flex-col items-center w-full">
-            <h3 className="text-xl text-center w-full">Friend Referred</h3>
+            <h3 className="text-xl text-center w-full">Friends Referred</h3>
             <div className="flex flex-row justify-evenly items-center w-full bg-white bg-opacity-15 mb-2 ">
               <Image
                 src={`/DailyLogin.png`}
@@ -74,7 +74,7 @@ const MyProgresModal: React.FC<MyProgresModalProps> = ({ onClose }) => {
         </div>
         <div className="flex flex-row justify-center items-center mb-4 rounded-lg border-gradient max-w-[48%] px-2">
           <div className="flex flex-col items-center w-full">
-            <h3 className="text-xl text-center w-full">Mission Completed</h3>
+            <h3 className="text-xl text-center w-full">Missions Completed</h3>
             <div className="flex flex-row justify-evenly items-center w-full bg-white bg-opacity-15 mb-2 p-1">
               <Image
                 src={`/DailyMission.png`}

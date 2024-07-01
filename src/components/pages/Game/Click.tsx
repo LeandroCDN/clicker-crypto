@@ -18,13 +18,17 @@ const Click = () => {
       setIconSize("h-48 w-48");
       setTimeout(() => {
         setIconSize("h-60 w-60");
-      }, 500); // Restaurar tamaño original después de 200ms
+      }, 500); // Restaurar tamaño original después de 500ms
 
       // Cambiar estado de presionado y cambiar la imagen
       setPressed(true);
       setTimeout(() => {
         setPressed(false);
       }, 200); // Restaurar estado de presionado después de 200ms
+
+      // Reproducir sonido de tap
+      const tapSound = new Audio("/sfx/tap.wav");
+      tapSound.play();
     } else {
       // Manejo de caso donde no hay suficiente energy
       console.log("No tienes suficiente energy para realizar esta acción.");
@@ -41,7 +45,7 @@ const Click = () => {
           <Image
             src={pressed ? "/CoinUnpressed.png" : "/CoinPress.png"}
             alt="Coin"
-            className={``}
+            className={iconSize}
             width={300}
             height={300}
             draggable="false"

@@ -103,7 +103,7 @@ const DailyLoginModal: React.FC<DailyLoginModalProps> = ({ onClose }) => {
               width={120}
               height={120}
             />
-            <p>DAY 1</p>
+            <p>DAY 6</p>
           </button>
         </div>
       </div>
